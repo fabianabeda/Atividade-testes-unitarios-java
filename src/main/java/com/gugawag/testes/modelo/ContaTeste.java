@@ -126,9 +126,8 @@ public class ContaTeste {
     public void naoDeveTransferirValorMaiorQue1000() throws SaldoNegativoInvalidoException {
         try{
             c1.creditar(850);
-            c1.transferir(1100,"15");
+            c1.transferir(1100, c2);
             
-
         }catch (SaldoSuperiorInvalidoException e) {
             Assertions.fail();
         }
